@@ -1,0 +1,292 @@
+body {
+    background-color: #ffffff
+}
+
+.page-header {
+    margin: -25px 0 20px;
+    text-align: center
+}
+
+.page-header h1 {
+    color: #ea3434
+}
+
+.article-list_purus {
+    padding: 3rem 0;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.featured ul > li, .featured ul > li > img {
+    text-align: center
+}
+
+.featured ul > li {
+    text-transform: Capitalize;
+    padding: 10px
+}
+
+.featured .posttitle_purus {
+    text-transform: Capitalize;
+    text-rendering: optimizelegibility;
+    font-size: 2.6rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+    transition: all ease .3s
+}
+
+.featured .posttitle_purus:hover {
+    color: #ea3434
+}
+
+.featured .posttitle_purus span {
+    height: 28px;
+    font-size: 1.4rem;
+    border-radius: 100%;
+    color: #333
+}
+
+.featured .content_purus {
+    max-width: 80%;
+    letter-spacing: 1px;
+    font-size: 15px
+}
+
+.featured .time_purus {
+    margin-top: 20px;
+    color: #999
+}
+
+.featured .pubdate{
+    margin: 10px 0 30px 0;
+}
+
+.featured .pubdate .date {
+    color: #666;
+}
+
+.featured .pubdate .floor {
+    color: #999;
+    float: right;
+}
+.featured .time_purus .reply_r{
+    text-align: right;
+}
+
+.featured .time_purus .reply_c {
+    width: 100%;
+    /*display: none*/
+}
+
+.featured .time_purus .reply_c textarea {
+    height: 50px;
+    padding: 10px;
+    max-height: 60px;
+    max-width: 100%
+}
+
+.featured .time_purus .reply_c .replyBtn {
+    height: 50px;
+}
+
+.featured .time_purus .reply_c .form-group {
+    margin-top: 25px
+}
+
+.pull-left img{
+    width: 45px;
+}
+
+.ckgd {
+    color: #00b1bb;
+    display: inline-block;
+    text-decoration: underline
+}
+
+.ckgd:hover {
+    color: #00b1bb;
+    text-decoration: none
+}
+
+.intercom-messenger {
+    display: none;
+    z-index: 1039;
+    position: fixed;
+    bottom: calc(95px);
+    right: calc(4%/2);
+    /*width: 27%;*/
+    height: calc(100% - 20px - 75px - 20px);
+    min-height: 250px;
+    max-height: 590px;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 1
+}
+
+.mess-header, .mess-content, .mess-footer {
+    z-index: 1039;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 75px;
+    background-color: #5bb486;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
+}
+
+.mess-header {
+    text-align: center;
+}
+
+.mess-header h5{
+    margin: calc((75px - 34px)/2 ) 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.1em;
+}
+
+.mess-header small{
+    color: hsla(0,0%,100%,.8);
+    font-size: 13px;
+    line-height: 1.1em;
+}
+.mess-content {
+    background: url("pattern.PNG") #ffffff;
+    top: 75px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 75px)
+}
+
+.mess-cont-area{
+    margin: 5%;
+    width: 90%;
+}
+
+.mess-cont-area textarea{
+    max-width: 100%;
+    max-height: 214px;
+}
+
+
+.mess-footer{
+    top:auto!important;
+    box-shadow: none;
+    bottom: 0;
+    text-align: center;
+    border-radius: 0 0 6px 6px;
+    height: 90px;
+    pointer-events: none;
+    background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0))
+}
+
+.mess-btn{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    font-size: 13px;
+    pointer-events: auto;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    border-radius: 7px;
+    background-color: #7e93af;
+    text-align: center;
+    transition: all .12s;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.mess-btn:hover{
+    box-shadow: 0 6px 19px 1px rgba(0,0,0,.2);
+}
+
+.mess-btn:focus, .mess-btn:active:focus{
+    outline: 5px auto #f3f3f3;
+    outline-offset: -2px;
+}
+
+.intercom-frame {
+    -webkit-animation: intercom-launcher-frame-appear .25s ease !important;
+    animation: intercom-launcher-frame-appear .25s ease !important;
+    z-index: 1039;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: box-shadow 80ms ease-in-out;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06), 0 2px 32px rgba(0, 0, 0, 0.16)
+}
+
+.open-active {
+    opacity: 0 !important;
+    -webkit-transform: rotate(30deg) scale(0) !important;
+    -ms-transform: rotate(30deg) scale(0) !important;
+    transform: rotate(30deg) scale(0) !important
+}
+
+.close-active {
+    opacity: 1 !important;
+    -webkit-transform: rotate(0deg) !important;
+    -ms-transform: rotate(0deg) !important;
+    transform: rotate(0deg) !important
+}
+
+.intercom-reply {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #5bb486;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    font-family: "intercom-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.intercom-reply .intercom-launcher-open-icon {
+    background-image: url(reply_open.png);
+    background-size: 32px 36px;
+    background-repeat: no-repeat;
+    background-position: center 14px;
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1)
+}
+
+.intercom-reply .intercom-launcher-close-icon {
+    background-image: url(reply_close.png);
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg)
+}
+
+.intercom-launcher-open-icon, .intercom-launcher-close-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: opacity .08s linear, -webkit-transform .16s linear;
+    transition: transform .16s linear, opacity .08s linear;
+    transition: transform .16s linear, opacity .08s linear, -webkit-transform .16s linear;
+    background-position: 50%;
+    background-repeat: no-repeat
+}

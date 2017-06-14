@@ -1,0 +1,51 @@
+
+#register form span {
+    width: 300px;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+}
+#register img.vcode{
+	display: block;
+
+}
+.errspan{
+    color: #ff6e6b!important;
+}
+.okspan{
+    color: #53d287!important;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .container{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    #register form span{
+        margin: 0 auto;
+        width: 90%;
+        display:block;
+        color: #999;
+        font-size: 12px;
+        height: 34px;
+        line-height: 34px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container{
+    padding-right: 0;
+    padding-left: 0;
+}
+#register form span{
+    margin: 0 auto;
+    width: 90%;
+    display:block;
+    color: #999;
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+}
+}

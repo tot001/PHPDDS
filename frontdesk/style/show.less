@@ -1,0 +1,181 @@
+body{
+  background-color: #ffffff;
+}
+.page-header{
+  margin: -25px 0 20px;
+  text-align: center;
+  h1{
+    color: #ea3434;
+  }
+}
+.article-list_purus{
+  padding: 3rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.featured{
+  ul>li,ul>li>img{
+    text-align: center;
+  }
+  ul>li{
+    text-transform:Capitalize ;
+    padding: 10px;
+  }
+  .posttitle_purus{
+    text-transform:Capitalize ;
+    text-rendering: optimizelegibility;
+    font-size: 2.6rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+    transition: all ease 0.3s;
+    &:hover{
+        color: #ea3434;
+    }
+    span{
+      height: 28px;
+      font-size: 1.4rem;
+      border-radius: 100%;
+      color: #333;
+    }
+    }
+  .content_purus{
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+  .time_purus{
+    margin-top: 20px;
+    color: #999;
+    .reply_c{
+      width: 100%;
+      display: none;
+      textarea{
+        height: 50px;
+        padding: 10px;
+        max-height: 60px;
+        max-width: 100%;
+      }
+      .form-group{
+        margin-top: 25px;
+      }
+    }
+  }
+}
+.ckgd {
+  color: #00b1bb;
+  display: inline-block;
+  text-decoration: underline;
+  &:hover {
+    color: #00b1bb;
+    text-decoration: none;
+  }
+}
+
+.intercom-messenger{
+  z-index: 2147483000;
+  position: fixed;
+  bottom: calc(20px + 75px);
+  right: 20px;
+  height:calc(100% - 20px - 75px - 20px);
+  width: 370px;
+  min-height: 250px;
+  max-height: 590px;
+  box-shadow: 0 5px 40px rgba(0,0,0,.16);
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 1;
+}
+.mess-header{
+  z-index: 2147483001;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 75px;
+  background-color: #5bb486;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+.mess-content:extend(.mess-header){
+  top:75px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  height: calc(100% - 75px);
+}
+
+.intercom-frame{
+  -webkit-animation: intercom-launcher-frame-appear .25s ease!important;
+  animation: intercom-launcher-frame-appear .25s ease!important;
+  z-index: 2147483000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: box-shadow 80ms ease-in-out;
+  box-shadow: 0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16);
+
+}
+.open-active{
+    opacity: 0!important;
+    -webkit-transform: rotate(30deg) scale(0)!important;
+    -ms-transform: rotate(30deg) scale(0)!important;
+    transform: rotate(30deg) scale(0)!important;
+  }
+.close-active{
+    opacity: 1!important;
+    -webkit-transform: rotate(0deg)!important;
+    -ms-transform: rotate(0deg)!important;
+    transform: rotate(0deg)!important;
+  }
+.intercom-reply{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: #5bb486;
+  border-radius:50%;
+  cursor: pointer;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  font-family: "intercom-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .intercom-launcher-open-icon{
+    background-image: url(reply_open.png);
+    background-size: 32px 36px;
+    background-repeat: no-repeat;
+    background-position: center 14px;
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+}
+  .intercom-launcher-close-icon{
+    background-image: url(reply_close.png);
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+}
+.intercom-launcher-open-icon,
+.intercom-launcher-close-icon{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  transition: opacity .08s linear,-webkit-transform .16s linear;
+  transition: transform .16s linear,opacity .08s linear;
+  transition: transform .16s linear,opacity .08s linear,-webkit-transform .16s linear;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+
+

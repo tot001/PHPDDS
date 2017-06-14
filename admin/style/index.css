@@ -1,0 +1,139 @@
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea,p {
+    margin:0;
+    padding:0;
+    font-size:13px;
+    font-family:Tahoma;
+}
+ul {
+    list-style:none;
+}
+img,
+a img {
+    border:none;
+}
+a {
+    text-decoration:none!important;
+}
+a:hover {
+    text-decoration:underline;
+}
+hr{
+     margin-top: 0;
+     margin-bottom: 0;
+}
+/*---------------------------------------------*/
+.main{
+    padding-top:60px;
+}
+
+#main{
+    float: right;
+}
+
+
+
+#sidebar {
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+}
+
+#sidebar div.small_title{
+    color: #3c3c3c;
+    padding: 4px 0 4px 15px;
+    background: #ff877f;
+}
+.sidebar_ul{
+    height: 100%;
+}
+.sidebar_li{
+    height: 29%;
+    margin-bottom: 2%;
+}
+
+#sidebar ul.child{
+    margin: 3px 0 3px 0;
+}
+#sidebar ul li{
+    background:#525252;
+}
+#sidebar ul li a{
+    color: #dddddd;
+    display: block;
+    padding: 4px 0 4px 2em;
+    background:url(bg.png) -265px 9px no-repeat;
+}
+#sidebar ul li a:hover{
+    color: #262626;
+    text-decoration: none;
+    background: url("bg.png") -265px 9px no-repeat #e9bbad;
+}
+#sidebar ul li a.current {
+    background:url(bg.png) -265px -11px no-repeat;
+}
+
+#main div.title{
+    color: #eee;
+    height: 28px;
+    line-height: 20px;
+    text-indent: 1px;
+    padding: 4px 0 4px 15px;
+    background: #525252;
+    font-weight: bold;
+}
+#main .explain {
+    color: #000;
+    padding: 14px 0;
+}
+#main .explain ul {
+    margin:0 0 0 20px;
+    line-height:160%;
+}
+#main .explain ul li {
+    color:#000;
+}
+table.list tr{
+    height:45px;
+}
+table.list tr th{
+    text-align: left;
+    padding-right: 40px;
+}
+table.list tr td{
+    padding-right:40px;
+    text-align: left;
+}
+input.sort{
+    width: 50px;
+    height:20px;
+}
+
+input.btn{
+    margin: 10px 0;
+}
+
+table.au input,
+select{
+    width:200px;
+    height: 28px;
+}
+table.au tr td{
+    text-align: left;
+    padding-top:10px;
+    padding-right: 40px;
+    padding-bottom:20px;
+}
+
+.my_Alert{
+    position: fixed;
+    height: 70px;
+    top: 20%;
+    right: 42%;
+}
+#Alert_sort{
+    display: none;
+    position: fixed;
+    width: 200px;
+    top: 20%;
+    right: 42%;
+}

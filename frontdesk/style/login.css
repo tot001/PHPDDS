@@ -1,0 +1,104 @@
+.head_content{
+    margin-top:10%;
+}
+.checkbox{
+    padding-top: 0 !important;
+}
+.form-group div input{
+    text-transform: uppercase;
+}
+.pos_con{
+    background: #ffffff;
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+.vcode{
+    border-radius: 2px;
+    border: 1px solid #dfdfdf;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+    .head_content{
+        margin-top: 25%;
+    }
+    .pos_con{
+        background: rgba(86, 86, 86, 0.8);
+    }
+    .form-group input[type="text"],
+    .form-group input[type="password"]{
+        font-size: 1.1em;
+        padding:2% 2% 0 2%;
+        display: table;
+        margin: 0 auto;
+        border: none;
+        text-overflow: ellipsis;
+        font-weight:500;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+        color:#ff877f;
+        background-color: transparent;
+        -webkit-transition: all 0.25s linear;
+        border-radius:0;
+        box-shadow:none;
+    }
+    .form-group input[type="text"]:focus,
+    .form-group input[type="password"]:focus{
+        outline:none;
+        color: #f9fff3;
+        border-color:rgba(255,135,127,1);
+        -webkit-box-shadow:inset 0 1px 1px rgba(255, 255, 255, 0.01), 0 0 3px #222;
+        -moz-box-shadow:inset 0 1px 1px rgba(255, 255, 255, 0.01), 0 0 3px #222;
+        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.01), 0 0 3px #222;
+    }
+    .form-group label{
+        display: none;
+    }
+    .remember{
+        display: block!important;
+    }
+    .checkbox{
+        padding-top: 7px !important;
+        text-align: center;
+        color: #ff877f;
+    }
+    .btn_xs{
+        width: 100%;
+        line-height: 1.33;
+        border-radius: 6px;
+        color: #999;
+        background-color: transparent;
+        border-color:transparent;
+    }
+    .btn:hover{
+        color: #fff;
+        background-color: transparent;
+        border-color:transparent;
+    }
+    .btn:focus{
+         outline: none!important;
+    }
+    .btn:active{
+        box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.18)!important;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .checkbox{
+        text-align: center;
+    }
+    .btn_xs{
+        width: 100%;
+        padding: 10px 16px;
+        line-height: 1.33;
+        border-radius: 6px;
+    }
+}
