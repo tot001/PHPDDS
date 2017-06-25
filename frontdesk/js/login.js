@@ -34,7 +34,7 @@ $("#logout").click(function () {
         if (msg == 1) {
             $.cookie("memberName", null);
             $.cookie("memberPw", null);
-            window.location.href = "http://localhost/DDS/frontdesk/index.php"
+            window.location.href = "http://localhost/DDS/frontdesk/index.php";
         } else {
             return false
         }

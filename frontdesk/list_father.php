@@ -60,7 +60,7 @@ $count_today=num($link,$query);
                 $page=page($count_all,2,5);
 
                 if ($count_all!=0){
-                    $query="SELECT st.title,st.time,st.times,st.id,sr.name,sr.photo,son.module_name,son.id ssm_id 
+                    $query="SELECT st.title,st.time,st.times,st.id,st.member_id,sr.name,sr.photo,son.module_name,son.id ssm_id 
 FROM sm_content st , sm_member sr ,sm_son_module son 
 WHERE st.module_id IN ({$id_son}) 
 and st.member_id = sr.id 
@@ -81,7 +81,7 @@ and st.module_id=son.id {$page['limit']}";
                 ?>
                     <li>
                         <div class="smallPic">
-                            <a href=""><img src="<?php if($data_con['photo']!=''){echo $data_con['photo'];}else{echo 'style/photo.jpg';}?>" alt=""></a>
+                            <a href="member.php?id=<?php echo $data_con['member_id']?>"><img src="<?php if($data_con['photo']!=''){echo $data_con['photo'];}else{echo 'style/photo.jpg';}?>" alt=""></a>
                         </div>
                         <div class="subject">
                             <div class="titleWarp">

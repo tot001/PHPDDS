@@ -14,8 +14,9 @@
         }
     ?>
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<!--    <script src="../dist/js/bootstrap.min.js"></script>-->
 <!--    <script>-->
 <!--        lless = {env: "development", async: false, fileAsync: false,poll: 1000, functions: {}, dumpLineNumbers: "comments", relativeUrls: false, rootpath: ""};-->
 <!--    </script>-->
@@ -38,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#" >Admin</a>
+                    <a class="navbar-brand" href="index.php" >Admin</a>
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">首页</a></li>
                     </ul>
@@ -57,8 +58,8 @@
                             <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
                             <li><a href="" id="login" data-toggle="modal" data-target="#Modal_log"><span  class="glyphicon glyphicon-log-in "></span> 登录</a></li>
                         <?php } else{?>
+                            <li><a href="member.php?id=<?php echo $member_id?>" class="Avatar"><img src="style/photo.jpg"></a></li>
                             <li><a href="index.php" id="logout"><span  class="glyphicon glyphicon-log-in "></span> Logout</a></li>
-                            <!-- <li><a href="" class="Avatar"><img src="style/download.png"></a></li>-->
                         <?php }?>
                     </ul>
                 </div>

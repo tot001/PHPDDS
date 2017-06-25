@@ -2,7 +2,7 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/msql.inc.php';
 include_once '../inc/tool.inc.php';
-include_once 'Text input.php';
+
 
 $template=array("title"=>"publish",
     "keywords"=>"publish",
@@ -11,6 +11,7 @@ $template=array("title"=>"publish",
     "js"=>array('js/publish.js'));
 
 $link=connect();
+
 if(!$member_id=is_login($link)){
     if (isset($_SERVER['HTTP_REFERER'])){
         $url=$_SERVER['HTTP_REFERER'];
@@ -27,9 +28,9 @@ if (isset($_POST['submit'])){
     $query="insert into sm_content(module_id,title,content,time,member_id) values({$_POST['module_id']},'{$_POST['title']}','{$_POST['content']}',now(),{$member_id})";
     execute($link, $query);
     if(mysqli_affected_rows($link)==1){
-        skip('publish.php','发布成功');
+        skip('publish.php',"",'发布成功');
     }else{
-        skip('publish.php','发布失败');
+        skip('publish.php',"",'发布失败');
         exit();
     }
 }

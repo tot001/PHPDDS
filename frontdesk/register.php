@@ -2,7 +2,7 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/msql.inc.php';
 include_once '../inc/tool.inc.php';
-include_once 'Text input.php';
+
 $link=connect();
 $template=array("title"=>"注册会员",
     "keywords"=>"注册会员",

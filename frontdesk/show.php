@@ -76,7 +76,8 @@ $page=page($count_reply,$page_size);
     <div class="article_list_j">
     <?php
     $i=($_GET['page']-1)*$page_size+1;
-    $query="SELECT sp.time,sp.content,sp.id,sp.quote_id,sp.member_id,sm.photo,sm.name FROM sm_reply sp,sm_member sm WHERE sp.member_id=sm.id AND sp.content_id={$_GET['id']} ORDER by id asc {$page['limit']}";
+    $query="SELECT sp.time,sp.content,sp.id,sp.quote_id,sp.member_id,sm.photo,sm.name FROM sm_reply sp,sm_member sm WHERE 
+sp.member_id=sm.id AND sp.content_id={$_GET['id']} AND sp.quote_id=0 ORDER by id asc {$page['limit']}";
         $result_reply=execute($link,$query);
         while ($data_reply=mysqli_fetch_assoc($result_reply)){
             $data_reply['content']=nl2br(htmlspecialchars($data_reply['content']));
@@ -99,11 +100,13 @@ $page=page($count_reply,$page_size);
                     <div class="time_purus col-lg-12 col-md-12" >
                         <div class="queto<?php echo $data_reply['id']?> col-lg-11 col-md-10 col-sm-10 ">
                             <?php
-                            $query="SELECT count(*) FROM amdds.sm_reply sp,amdds.sm_member sm WHERE sp.quote_id={$data_reply['id']} AND sp.content_id={$_GET['id']} AND sp.member_id=sm.id";
+                            $query="SELECT count(*) FROM amdds.sm_reply sp,amdds.sm_member sm WHERE 
+sp.quote_id={$data_reply['id']} AND sp.content_id={$_GET['id']} AND sp.member_id=sm.id";
                             $floor=num($link,$query);
                             if ($floor>=1){
                                 echo "<div class='media well'>";
-                            $query="SELECT sp.content,sp.quote_id,sm.photo,sm.name FROM amdds.sm_reply sp,amdds.sm_member sm WHERE sp.quote_id={$data_reply['id']} AND sp.content_id={$_GET['id']} AND sp.member_id=sm.id";
+                            $query="SELECT sp.content,sp.quote_id,sm.photo,sm.name FROM amdds.sm_reply sp,amdds.sm_member sm WHERE 
+sp.quote_id={$data_reply['id']} AND sp.content_id={$_GET['id']} AND sp.member_id=sm.id";
                             $result_quote=execute($link,$query);
                             while ($data_quote=mysqli_fetch_assoc($result_quote)){
                                     ?>

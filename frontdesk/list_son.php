@@ -73,7 +73,7 @@ $data_father=mysqli_fetch_assoc($result_father);
                 <?php
                 $page=page($count_all,2,8);
                 if ($count_all!=0){
-                    $query="SELECT st.title,st.time,st.times,st.id,sr.name,sr.photo,son.module_name FROM sm_content st , sm_member sr ,sm_son_module son WHERE st.module_id IN ({$data_son['id']}) and st.member_id = sr.id and st.module_id=son.id {$page['limit']}";
+                    $query="SELECT st.title,st.time,st.times,st.id,st.member_id,sr.name,sr.photo,son.module_name FROM sm_content st , sm_member sr ,sm_son_module son WHERE st.module_id IN ({$data_son['id']}) and st.member_id = sr.id and st.module_id=son.id {$page['limit']}";
                     $result_con=execute($link,$query);
 //                    var_dump(mysqli_fetch_all($result_con,MYSQLI_ASSOC));
                     while ($data_con=mysqli_fetch_assoc($result_con)){
@@ -90,7 +90,7 @@ $data_father=mysqli_fetch_assoc($result_father);
                         ?>
                         <li>
                             <div class="smallPic">
-                                <a href=""><img src="<?php if($data_con['photo']!=''){echo $data_con['photo'];}else{echo 'style/photo.jpg';}?>" alt=""></a>
+                                <a href="member.php?id=<?php echo $data_con['member_id']?>"><img src="<?php if($data_con['photo']!=''){echo $data_con['photo'];}else{echo 'style/photo.jpg';}?>" alt=""></a>
                             </div>
                             <div class="subject">
                                 <div class="titleWarp">
