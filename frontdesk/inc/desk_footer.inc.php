@@ -1,6 +1,7 @@
 
 <?php if (!$member_id){?>
-<div class="modal fade" id="Modal_log" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="Modal_log" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

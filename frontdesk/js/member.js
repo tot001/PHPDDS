@@ -5,37 +5,38 @@ $(function () {
        $('.prompt').hide();
     });
     Andstep('cm');
+
 });
 function Mem_Ajax(id) {
+    var $val;
     $('#h-sign').focus(function () {
-        var $val=$(this).val();
-        $(this).change(function () {
-            var value=$(this).val();
-            if($val != value){
-                $.ajax({
-                    async: false,
-                    type:'POST',
-                    url:"Ajax.php?action=member&id="+id,
-                    dataType: "json",
-                    data:{
-                        val:value
-                    },
-                    cache:false,
-                    success:function () {}
-                })
-            }
-
-        })
+        $val=$(this).val();
     });
+    $('#h-sign').blur(function () {
+        var value=$(this).val();
+        if($val != value){
+            $.ajax({
+                type:'POST',
+                url:"Ajax.php?action=member&id="+id,
+                dataType: "json",
+                timeout:3000,
+                data:{
+                    val:value
+                },
+                cache:false,
+                success:function () {}
+            })
+        }
+
+    })
 
 }
 function Andstep(Classname) {
-    var OClassname = document.getElementsByClassName(Classname);
-    for (var i = 0; i <= OClassname.length; i++) {
-        $(OClassname [i]).click(function () {
+    $('.'+Classname).each(function (index,element) {
+        $(element).click(function () {
             var url=$(this).attr('data-url');
             $('.modal-content').load(url);
             $(this).unbind('click');
-        });
-    }
+        })
+    })
 }
